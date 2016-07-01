@@ -7,26 +7,33 @@
     <!--底部的tab-->
 
 
-    <cn.zhichi.preventclick.view.TabButtomLayout
+    <!--<cn.zhichi.preventclick.view.TabButtomLayout-->
+        <!--android:id="@+id/main_botton_tab_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="47dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="@color/app_back_ground"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--&gt;-->
+
+
+    <!--</cn.zhichi.preventclick.view.TabButtomLayout>-->
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:layout_gravity="bottom"
         android:id="@+id/main_botton_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:orientation="horizontal"
-        android:background="@color/app_back_ground"
         android:layout_alignParentBottom="true"
-        >
-
-
-    </cn.zhichi.preventclick.view.TabButtomLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <!--上层的viewpager-->
 
-    <android.support.v4.view.ViewPager
+    <cn.zhichi.preventclick.view.MainViewPager
         android:id="@+id/main_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/main_botton_tab_layout">
 
 
-    </android.support.v4.view.ViewPager>
+    </cn.zhichi.preventclick.view.MainViewPager>
 
 </RelativeLayout>

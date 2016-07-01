@@ -1,14 +1,154 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     tools:context="cn.zhichi.preventclick.fragment.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/main_top_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="mainfragment" />
+        android:orientation="horizontal"
+        android:background="@color/app_back_ground"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="100dp">
+        <RelativeLayout
+            android:id="@+id/main_fragment_toplayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/main_fragment_imageview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_persencenter_unclick"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/main_fragment_textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/main_fragment_imageview1"
+                android:textColor="@color/main_tab_text_unclick_color"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main_fragment_toplayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/main_fragment_imageview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_recommend_unclick"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/main_fragment_textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/main_fragment_imageview2"
+                android:textColor="@color/main_tab_text_unclick_color"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main_fragment_toplayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/main_fragment_imageview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_snipe_unclick"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/main_fragment_textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="狙击"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/main_fragment_imageview3"
+                android:textColor="@color/main_tab_text_unclick_color"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main_fragment_toplayout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/main_fragment_imageview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_message_unclick"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/main_fragment_textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="留言"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/main_fragment_imageview4"
+                android:textColor="@color/main_tab_text_unclick_color"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_below="@+id/main_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
 
-</FrameLayout>
+    </android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:id="@+id/main_product_title_layout"
+        android:layout_below="@id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <TextView
+            android:id="@+id/main_product_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="智驰产品"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFC5C5C5"
+            android:layout_below="@+id/main_product_title_textview"
+            ></View>
+    </RelativeLayout>
+    <cn.zhichi.preventclick.view.ListViewForScrollView
+        android:id="@+id/main_fragment_listview"
+        android:layout_below="@id/main_product_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </cn.zhichi.preventclick.view.ListViewForScrollView>
+
+</RelativeLayout>

@@ -6,4 +6,7 @@
     <color name="app_back_ground">#FF333333</color>
     <color name="tab_click_color">#FFF15D16</color>
     <color name="tab_unclick_color">#fefefe</color>
+
+    <color name="main_tab_text_unclick_color">#fefefe</color>
+    <color name="main_tab_text_click_color">#FFF15D16</color>
 </resources>
